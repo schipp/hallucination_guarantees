@@ -1,0 +1,47 @@
+lines.color: 0E1116
+patch.edgecolor: 0E1116
+
+text.color: 0E1116
+
+font.size: 10
+# old bg 191724
+axes.facecolor: FFFFFF
+axes.edgecolor: 0E1116
+axes.labelcolor: 0E1116
+axes.titlesize: 8
+axes.labelsize: 8
+axes.axisbelow: True
+
+xtick.major.size: 2
+xtick.major.pad: 1
+ytick.major.size: 2
+ytick.major.pad: 1
+
+axes.prop_cycle: cycler('color', ['3F90DA', 'FFA90E', 'BD1F01', '94A4A2', '832DB6', 'A96B59', 'E76300', 'B9AC70', '717581', '92DADD'])
+
+xtick.color: 0E1116
+xtick.labelsize: 8
+ytick.color: 0E1116
+ytick.labelsize: 8
+
+legend.facecolor: FFFFFF
+legend.edgecolor: FFFFFF
+legend.frameon: True
+legend.framealpha: 0.75
+legend.fontsize: 6
+
+grid.color: 41414D
+grid.linestyle: "--"
+
+figure.facecolor: FFFFFF
+figure.edgecolor: FFFFFF
+
+savefig.facecolor: FFFFFF
+savefig.edgecolor: FFFFFF
+savefig.bbox: tight
+
+boxplot.boxprops.color: 0E1116
+boxplot.capprops.color: 0E1116
+boxplot.flierprops.color: 0E1116
+boxplot.flierprops.markeredgecolor: 0E1116
+boxplot.whiskerprops.color: 0E1116
