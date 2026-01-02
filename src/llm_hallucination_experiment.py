@@ -354,4 +354,4 @@ if __name__ == "__main__":
         ax_hall.set_xlabel("Judges $K$")
         ax_hall.set_title(f"{labels[task_idx][1]}", loc="left", fontsize=8, pad=4)
 
-    fig.savefig("fig/experiments.png", dpi=300, bbox_inches="tight")
+    fig.savefig("../fig/experiments.png", dpi=300, bbox_inches="tight")
