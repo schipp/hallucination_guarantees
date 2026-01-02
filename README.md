@@ -2,7 +2,7 @@
 
 <img align="center" src="fig/pipeline.png" width="1200px"> 
 
-This code demonstrates a pipeline that gives probabilistic guarantees for the occurence and selection-probability of contextually correct vs. hallucinated answers in LLM responses. The pipeline is described in detail in the corresponding manuscript "Probabilistic Guarantees for Reducing Contextual Hallucinations in LLMs" by Rautenberg & Schippkus 2026.
+This code demonstrates a pipeline that gives probabilistic guarantees for the occurence and selection-probability of contextually correct vs. hallucinated answers in LLM responses. A full description of the pipeline is given in the manuscript *"Probabilistic Guarantees for Reducing Contextual Hallucinations in LLMs"* by Rautenberg & Schippkus (2026).
 
 The resulting statistics are
 
