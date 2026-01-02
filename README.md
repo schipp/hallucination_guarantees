@@ -1,6 +1,16 @@
 # Probabilistic Guarantees for Reducing Contextual Hallucinations in LLMs
 
+<img align="center" src="fig/pipeline.png" width="1200px"> 
+
 This code demonstrates a pipeline that gives probabilistic guarantees for the occurence and selection-probability of contextually correct vs. hallucinated answers in LLM responses. The pipeline is described in detail in the corresponding manuscript "Probabilistic Guarantees for Reducing Contextual Hallucinations in LLMs" by Rautenberg & Schippkus 2026.
+
+The resulting statistics are
+
+<figure>
+  <img align="center" src="fig/experiments.png" width="1000px"> 
+  <figcaption>Empirical performance of the repetition-judge pipeline and ensemble judge, estimated over 10,000 pipeline runs. The code here produces this figure.</figcaption>
+</figure>
+
 
 ## Abstract
 

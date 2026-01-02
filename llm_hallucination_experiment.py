@@ -86,7 +86,7 @@ def compute_wilson_ci(frates, R, alpha=0.05):
 
 
 def Q_majority_torch(q, k):
-    """Compute Q for given q and odd k. Used for Theorem 3.1."""
+    """Compute Q for given q and odd k. Used for Theorem 3.2."""
     q = torch.tensor(q, dtype=torch.float32)
     m = (k // 2) + 1
     i_vals = torch.arange(m, k + 1, dtype=torch.float32)
@@ -98,14 +98,14 @@ def Q_majority_torch(q, k):
 
 
 def judge_only_hallucination_rate_torch(q_pp, q_np, k):
-    """Compute hallucination-selection rate for given q++/q-+ and odd k. Used for Theorem 3.1."""
+    """Compute hallucination-selection rate for given q++/q-+ and odd k. Used for Theorem 3.2."""
     Q_pp = Q_majority_torch(q_pp, k)
     Q_np = Q_majority_torch(q_np, k)
     return Q_np / (Q_pp + Q_np)
 
 
 def judge_only_hallucination_rate_all_ks(q_pp, q_np, ks):
-    """Compute hallucination-selection rates for all ks. Used for Theorem 3.1."""
+    """Compute hallucination-selection rates for all ks. Used for Theorem 3.2."""
     return torch.tensor(
         [judge_only_hallucination_rate_torch(q_pp, q_np, k).item() for k in ks]
     )
@@ -262,7 +262,7 @@ if __name__ == "__main__":
         q_pp = jstats["single"]["q_pp"]
         q_np = jstats["single"]["q_np"]
 
-        # Theorem 2.1
+        # Theorem 3.1
         model_pf = (1 - (p_est * q_pp + (1 - p_est) * q_np)) ** N_values
 
         ax_pf = axs[0, task_idx]
@@ -327,7 +327,7 @@ if __name__ == "__main__":
         Q_pp_list = torch.tensor(Q_pp_list)
         Q_np_list = torch.tensor(Q_np_list)
 
-        # Theorem 3.1
+        # Theorem 3.2
         model_hall = ((1 - p_est) * q_np * Q_np_list) / (
             p_est * q_pp * Q_pp_list + (1 - p_est) * q_np * Q_np_list
         )
@@ -354,4 +354,4 @@ if __name__ == "__main__":
         ax_hall.set_xlabel("Judges $K$")
         ax_hall.set_title(f"{labels[task_idx][1]}", loc="left", fontsize=8, pad=4)
 
-    fig.savefig("experiments.png", dpi=300, bbox_inches="tight")
+    fig.savefig("fig/experiments.png", dpi=300, bbox_inches="tight")
